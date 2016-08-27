@@ -23,4 +23,4 @@ WORKDIR /
 
 EXPOSE 4123
 
-CMD ["python", "run.py"]
+CMD ["python", "/usr/bin/run.py"]
