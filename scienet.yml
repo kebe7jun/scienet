@@ -1,0 +1,8 @@
+scienet:
+  image: kebe/scienet
+
+  restart: always
+  env:
+  - SERVER_POST=4123
+  - METHOD=chacha20
+  - PASS=public
