@@ -5,7 +5,7 @@ scienet:
   - 8123:4123
 
   restart: always
-  env:
+  environment:
   - SERVER_POST=4123
   - METHOD=chacha20
   - PASS=public
