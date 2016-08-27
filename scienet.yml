@@ -1,6 +1,9 @@
 scienet:
   image: kebe/scienet
 
+  ports:
+  - 8123:4123
+
   restart: always
   env:
   - SERVER_POST=4123

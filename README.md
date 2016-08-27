@@ -6,6 +6,7 @@ A tool help you visit website with docker.
 
 ```
 $ git clone https://github.com/kebe7jun/scienet
+$ apt-get install docker.io
 $ pip install docker-compose
 $ docker-compose -f scienet.yml up -d
 ```
