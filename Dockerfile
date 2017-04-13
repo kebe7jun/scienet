@@ -7,6 +7,7 @@ ARG SS_URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$
 ENV SERVER_ADDR 0.0.0.0
 ENV PASS        public
 ENV METHOD      chacha20
+ENV SERVER_PORT 4123
 ENV TIMEOUT     300
 ENV DNS_ADDR    8.8.8.8
 ENV DNS_ADDR_2  8.8.4.4
@@ -43,10 +44,10 @@ RUN set -ex && \
 
 USER nobody
 
-EXPOSE 4123
+EXPOSE $SERVER_PORT
 
 CMD ss-server -s $SERVER_ADDR \
-              -p 4123 \
+              -p $SERVER_PORT \
               -k $PASS \
               -m $METHOD \
               -t $TIMEOUT \
